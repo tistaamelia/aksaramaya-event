@@ -9,9 +9,14 @@ class pelatihan extends Model
 {
     protected $table = 'pelatihan';
 
+    public static function jadwal_pelatihan_mentor()
+    {
+        return self::join('mentor', 'mentor.id', '=', 'pelatihan.id')->orderBy('pelatihan.waktu_pelatihan', 'asc');
+    }
+
     public static function jadwal_pelatihan()
     {
-        return self::join('mentor', 'mentor.id', '=', 'pelatihan.id')->where('pelatihan.waktu_pelatihan', '>=', DB::raw('now()'))->where('pelatihan.waktu_pelatihan', '<=', DB::raw('now() + interval 3 day'));
+        return self::join('mentor', 'mentor.id', '=', 'pelatihan.id')->where('pelatihan.waktu_pelatihan', '>=', DB::raw('now()'))->where('pelatihan.waktu_pelatihan', '<=', DB::raw('now() + interval 3 day'))->orderBy('pelatihan.waktu_pelatihan', 'asc');
     }
 
     public static function jadwal_pelatihan_tgl()

@@ -13,7 +13,7 @@
                     <img src="{{ asset($m->foto) }}" alt="{{ $m->nama }}" style="width: 100%; height: 300px; object-fit: cover">
                     @endif
                     <div class="details">
-                        <h3><a href="speaker-details.html">{{ $m->nama }}</a></h3>
+                        <h3><a href="{{ route('LandingPageDetailMentor', ['user' => $m->nama]) }}">{{ $m->nama }}</a></h3>
                         <p>{{ $m->keahlian }}</p>
                         <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>

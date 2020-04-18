@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use App\mentor;
 use App\pelatihan;
 use App\pengumuman;
 use App\pertanyaan_umum;
+use App\Mail\FormContact;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -47,6 +49,22 @@ class LandingPageController extends Controller
             'mentor' => mentor::all()
         ];
         return view('landing_page.list_mentor', $data);
+    }
+
+    public function detailMentor($user)
+    {
+        $detail_mentor = mentor::where('nama', '=', $user)->first();
+        $data = [
+            'detail_mentor' => $detail_mentor,
+            'jadwal_pelatihan' => pelatihan::jadwal_pelatihan_mentor()->where('mentor.id', '=', $detail_mentor->id)->get()
+        ];
+        return view('landing_page.detail_mentor', $data);
+    }
+
+    public function formContact(Request $request)
+    {
+        Mail::to('codebriefly@yopmail.com')->send(new FormContact($request));
+        return back();
     }
 
     /**

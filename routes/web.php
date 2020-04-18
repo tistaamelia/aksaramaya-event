@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'LandingPageController@index')->name('LandingPageIndex');
+Route::post('/form-contact', 'LandingPageController@formContact')->name('LandingPageFormContact');
 Route::get('/mentor', 'LandingPageController@listMentor')->name('LandingPageListMentor');
+Route::get('/mentor-detail/{user}', 'LandingPageController@detailMentor')->name('LandingPageDetailMentor');

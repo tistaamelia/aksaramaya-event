@@ -31,6 +31,26 @@
 <body>
     @yield('content')
 
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://twitter.com/AcademyMoco" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/Moco-Academy-112271677113715/" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/mocoacademy/" class="instagram"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                &copy; Powered by <strong>Aksaramaya</strong>.
+            </div>
+        </div>
+    </footer><!-- End  Footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
     <!-- Scripts -->
     <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('vendor/jquery.easing/jquery.easing.min.js') }}"></script>

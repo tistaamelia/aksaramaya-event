@@ -17,7 +17,7 @@
         </nav><!-- #nav-menu-container -->
     </div>
 </header>
-<main id="main">
+<main id="main" style="margin-top: 40px">
 <section id="speakers" class="wow fadeInUp" style="margin-top: 70px">
     <div class="container">
         <div class="section-header">
@@ -45,36 +45,6 @@
                 </div>
             </div>
             @endforeach
-            <!-- <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                    <img src="{{ asset('img/speakers/2.png') }}" alt="Speaker 2" class="img-fluid">
-                    <div class="details">
-                        <h3><a href="speaker-details.html">Handreas Stefano</a></h3>
-                        <p>Videographer</p>
-                        <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                    <img src="{{ asset('img/speakers/3.png') }}" alt="Speaker 3" class="img-fluid">
-                    <div class="details">
-                        <h3><a href="speaker-details.html">Maman Suherman</a></h3>
-                        <p>Content Creator</p>
-                        <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </section>
