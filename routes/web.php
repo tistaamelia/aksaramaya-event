@@ -13,6 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'LandingPageController@index')->name('LandingPageIndex');
+Route::get('/mentor', 'LandingPageController@listMentor')->name('LandingPageListMentor');

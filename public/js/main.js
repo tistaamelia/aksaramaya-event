@@ -25,14 +25,14 @@
   // Header fixed on scroll
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
-      $('#header').addClass('header-scrolled');
+      $('.header-landing-page').addClass('header-scrolled');
     } else {
-      $('#header').removeClass('header-scrolled');
+      $('.header-landing-page').removeClass('header-scrolled');
     }
   });
 
   if ($(window).scrollTop() > 100) {
-    $('#header').addClass('header-scrolled');
+    $('.header-landing-page').addClass('header-scrolled');
   }
 
   // Real view height for mobile devices
@@ -141,6 +141,7 @@
     dots: true,
     loop: true,
     center: true,
+    margin: 10,
     responsive: {
       0: {
         items: 1
@@ -155,6 +156,16 @@
         items: 5
       }
     }
+  });
+  
+  $(".intro-carousel").owlCarousel({
+    dots: false,
+    loop: false,
+    items: 1,
+    margin: 10,
+    // onChanged: (e) => {
+    //   console.log(e)
+    // }
   });
 
   // Buy tickets select the ticket type on click
