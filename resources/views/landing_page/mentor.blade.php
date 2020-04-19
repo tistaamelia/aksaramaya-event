@@ -20,7 +20,7 @@
                             @php
                             $url = $m->{$sm};
                             @endphp
-                            <a href="{{$url}}"><i class="fa fa-{{$sm}}"></i></a>
+                            <a href="{{$url}}" target="_blank"><i class="fa fa-{{$sm}}"></i></a>
                             @endforeach
                             <!-- <a href=""><i class="fa fa-facebook"></i></a>
                             <a href=""><i class="fa fa-instagram"></i></a> -->
@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="d-flex">
-        <a href="{{ route('LandingPageListMentor') }}" class="btn btn-danger text-capitalize m-auto btn-lg rounded-pill px-5">tampilkan lebih banyak</a>
+        <a href="{{ route('LandingPageListMentor') }}" class="text-white btn text-capitalize m-auto btn-lg rounded-pill px-5" style="background-color: #f82249">tampilkan lebih banyak</a>
     </div>
 
 </section>

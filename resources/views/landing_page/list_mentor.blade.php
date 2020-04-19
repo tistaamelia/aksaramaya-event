@@ -40,7 +40,7 @@
                                 @php
                                 $url = $m->{$sm};
                                 @endphp
-                                <a href="{{$url}}"><i class="fa fa-{{$sm}}"></i></a>
+                                <a href="{{$url}}" target="_blank"><i class="fa fa-{{$sm}}"></i></a>
                                 @endforeach
                             </div>
                         </div>

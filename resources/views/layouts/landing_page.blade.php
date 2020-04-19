@@ -36,9 +36,9 @@
         <div class="footer-top">
             <div class="container">
                 <div class="social-links d-flex justify-content-center">
-                    <a href="https://twitter.com/AcademyMoco" class="twitter mx-2"><i class="fa fa-twitter"></i></a>
-                    <a href="https://www.facebook.com/Moco-Academy-112271677113715/" class="facebook mx-2"><i class="fa fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/mocoacademy/" class="instagram mx-2"><i class="fa fa-instagram"></i></a>
+                    <a href="https://twitter.com/AcademyMoco" target="_blank" class="twitter mx-2"><i class="fa fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/Moco-Academy-112271677113715/" target="_blank" class="facebook mx-2"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/mocoacademy/" target="_blank" class="instagram mx-2"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>
         </div>
