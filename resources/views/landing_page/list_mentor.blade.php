@@ -13,6 +13,11 @@
         <nav id="nav-menu-container">
             <ul class="nav-menu">
                 <li class="menu-active"><a href="{{ route('LandingPageIndex') }}">Beranda</a></li>
+                <li><a href="{{ route('LandingPageIndex') }}#speakers">Mentor</a></li>
+                <li><a href="{{ route('LandingPageIndex') }}#schedule">Pelatihan</a></li>
+                <li><a href="{{ route('LandingPageIndex') }}#gallery">Pengumuman</a></li>
+                <li><a href="{{ route('LandingPageIndex') }}#contact">Hubungi kami</a></li>
+                <li class="buy-tickets d-none"><a href="#buy-tickets">Masuk</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>
