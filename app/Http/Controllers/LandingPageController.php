@@ -74,14 +74,15 @@ class LandingPageController extends Controller
 
     public function formContact(Request $request)
     {
-        // Mail::to('asd')->send(new FormContact($request));
-        Mail::send('emails.form_contact', [
-            'pesan' => $request->pesan
-        ], function ($message) use ($request) {
-            $message->subject($request->judul_pesan);
-            $message->from($request->email, $request->nama);
-            $message->to('hello@mocoacademy.id');
-        });
+        $to = 'hello@mocoacademy.id';
+        Mail::to($to)->send(new FormContact($request));
+        // Mail::send('emails.form_contact', [
+        //     'pesan' => $request->pesan
+        // ], function ($message) use ($request) {
+        //     $message->subject($request->judul_pesan);
+        //     $message->from($request->email, $request->nama);
+        //     $message->to('hello@mocoacademy.id');
+        // });
         return 'OK';
     }
 
