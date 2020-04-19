@@ -8,6 +8,7 @@
     <title>Moco Academy</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicons -->
     <link href="{{ asset('img/favicon.png') }}" rel="icon">

@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-// use Mail;
 use App\mentor;
 use App\pelatihan;
 use App\pengumuman;
@@ -77,7 +76,8 @@ class LandingPageController extends Controller
         $to = 'hello@mocoacademy.id';
         Mail::to($to)->send(new FormContact($request));
         // Mail::send('emails.form_contact', [
-        //     'pesan' => $request->pesan
+        //     'pesan' => $request->pesan,
+        //     'nama' => $request->nama
         // ], function ($message) use ($request) {
         //     $message->subject($request->judul_pesan);
         //     $message->from($request->email, $request->nama);

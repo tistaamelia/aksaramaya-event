@@ -31,10 +31,13 @@ class FormContact extends Mailable
      */
     public function build()
     {
+        // dd($this->param->email);
         return $this->from($this->param->email, $this->param->nama)
+            ->replyTo($this->param->email, $this->param->nama)
             ->subject($this->param->judul_pesan)
             ->view('emails.form_contact')
             ->with([
+                'nama' => $this->param->nama,
                 'pesan' => $this->param->pesan
             ]);
     }

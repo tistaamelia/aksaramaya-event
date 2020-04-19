@@ -1,6 +1,5 @@
 <div class="form">
     <form action="{{ route('LandingPageFormContact') }}" method="post" role="form" class="php-email-form">
-        <input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
         <div class="form-row">
             <div class="form-group col-md-6">
                 <input type="text" name="nama" class="form-control" id="name" placeholder="Nama" data-rule="minlen:4" data-msg="Field harus diisi minimal 4 karakter" />
