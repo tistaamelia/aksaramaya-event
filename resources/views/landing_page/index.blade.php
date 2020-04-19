@@ -79,7 +79,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Speakers Section ======= -->
-    @include('landing_page.mentor', $mentor)
+    @include('landing_page.mentor', [$mentor, $social_media])
     <!-- End Speakers Section -->
 
     <!-- ======= Schedule Section ======= -->

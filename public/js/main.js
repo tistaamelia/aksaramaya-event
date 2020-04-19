@@ -4,8 +4,8 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-!(function($) {
-  "use strict";
+// !(function($) {
+//   "use strict";
 
   // Back to top button
   $(window).scroll(function() {
@@ -176,4 +176,4 @@
     modal.find('#ticket-type').val(ticketType);
   })
 
-})(jQuery);
+// })(jQuery);

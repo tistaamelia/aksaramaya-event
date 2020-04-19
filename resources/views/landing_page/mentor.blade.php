@@ -16,49 +16,23 @@
                         <h3><a href="{{ route('LandingPageDetailMentor', ['user' => $m->nama]) }}">{{ $m->nama }}</a></h3>
                         <p>{{ $m->keahlian }}</p>
                         <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
+                            @foreach($social_media as $sm)
+                            @php
+                            $url = $m->{$sm};
+                            @endphp
+                            <a href="{{$url}}"><i class="fa fa-{{$sm}}"></i></a>
+                            @endforeach
+                            <!-- <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-instagram"></i></a> -->
                         </div>
                     </div>
                 </div>
             </div>
             @endforeach
-            <!-- <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                    <img src="{{ asset('img/speakers/2.png') }}" alt="Speaker 2" class="img-fluid">
-                    <div class="details">
-                        <h3><a href="speaker-details.html">Handreas Stefano</a></h3>
-                        <p>Videographer</p>
-                        <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                    <img src="{{ asset('img/speakers/3.png') }}" alt="Speaker 3" class="img-fluid">
-                    <div class="details">
-                        <h3><a href="speaker-details.html">Maman Suherman</a></h3>
-                        <p>Content Creator</p>
-                        <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
     <div class="d-flex">
-        <a href="{{ route('LandingPageListMentor') }}" class="btn btn-danger text-capitalize m-auto btn-lg">tampilkan lebih banyak</a>
+        <a href="{{ route('LandingPageListMentor') }}" class="btn btn-danger text-capitalize m-auto btn-lg rounded-pill px-5">tampilkan lebih banyak</a>
     </div>
 
 </section>

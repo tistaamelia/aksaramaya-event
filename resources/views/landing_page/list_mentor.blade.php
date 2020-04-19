@@ -18,36 +18,38 @@
     </div>
 </header>
 <main id="main" style="margin-top: 40px">
-<section id="speakers" class="wow fadeInUp" style="margin-top: 70px">
-    <div class="container">
-        <div class="section-header">
-            <h2>Mentor</h2>
-            <p>Belajar dari mentor terbaik di bidangnya</p>
-        </div>
+    <section id="speakers" class="wow fadeInUp" style="margin-top: 70px">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mentor</h2>
+                <p>Belajar dari mentor terbaik di bidangnya</p>
+            </div>
 
-        <div class="row">
-            @foreach($mentor as $m)
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                    @if($m->foto)
-                    <img src="{{ asset($m->foto) }}" alt="{{ $m->nama }}" style="width: 100%; height: 300px; object-fit: cover">
-                    @endif
-                    <div class="details">
-                        <h3><a href="speaker-details.html">{{ $m->nama }}</a></h3>
-                        <p>{{ $m->keahlian }}</p>
-                        <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
+            <div class="row">
+                @foreach($mentor as $m)
+                <div class="col-lg-4 col-md-6">
+                    <div class="speaker">
+                        @if($m->foto)
+                        <img src="{{ asset($m->foto) }}" alt="{{ $m->nama }}" style="width: 100%; height: 300px; object-fit: cover">
+                        @endif
+                        <div class="details">
+                            <h3><a href="speaker-details.html">{{ $m->nama }}</a></h3>
+                            <p>{{ $m->keahlian }}</p>
+                            <div class="social">
+                                @foreach($social_media as $sm)
+                                @php
+                                $url = $m->{$sm};
+                                @endphp
+                                <a href="{{$url}}"><i class="fa fa-{{$sm}}"></i></a>
+                                @endforeach
+                            </div>
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
-    </div>
-</section>
+    </section>
 </main><!-- End #main -->
 
 <script>

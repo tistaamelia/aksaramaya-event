@@ -13,6 +13,11 @@
         <nav id="nav-menu-container">
             <ul class="nav-menu">
                 <li class="menu-active"><a href="{{ route('LandingPageIndex') }}">Beranda</a></li>
+                <li><a href="{{ route('LandingPageIndex') }}#speakers">Mentor</a></li>
+                <li><a href="{{ route('LandingPageIndex') }}#schedule">Pelatihan</a></li>
+                <li><a href="{{ route('LandingPageIndex') }}#gallery">Pengumuman</a></li>
+                <li><a href="{{ route('LandingPageIndex') }}#contact">Hubungi kami</a></li>
+                <li class="buy-tickets d-none"><a href="#buy-tickets">Masuk</a></li>
             </ul>
         </nav><!-- #nav-menu-container -->
     </div>
@@ -34,9 +39,12 @@
                     <div class="details">
                         <h2>{{ $detail_mentor->nama }}</h2>
                         <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-instagram"></i></a>
+                            @foreach($social_media as $sm)
+                            @php
+                            $url = $detail_mentor->{$sm};
+                            @endphp
+                            <a href="{{$url}}"><i class="fa fa-{{$sm}}"></i></a>
+                            @endforeach
                         </div>
                         <p>{{ $detail_mentor->detail_profil }}</p>
                         <div class="list-pelatihan py-2 mt-3">
