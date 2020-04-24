@@ -46,7 +46,7 @@
                             <a href="{{$url}}" target="_blank"><i class="fa fa-{{$sm}}"></i></a>
                             @endforeach
                         </div>
-                        <p>{{ $detail_mentor->detail_profil }}</p>
+                        <p>{!! $detail_mentor->detail_profil !!}</p>
                         <div class="list-pelatihan py-2 mt-3">
                             <h4 class="text-capitalize font-weight-bold">pelatihan</h4>
                             <div class="schedule">
