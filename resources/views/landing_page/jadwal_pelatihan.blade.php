@@ -9,7 +9,7 @@
             @foreach($jadwal_pelatihan_tgl as $key => $t)
             @php
             setlocale(LC_ALL, 'id_ID');
-            $tmp = strtotime($t->waktu_pelatihan);
+            $tmp = strtotime($t);
             $tgl = date("j F", $tmp);
             @endphp
             <li class="nav-item">

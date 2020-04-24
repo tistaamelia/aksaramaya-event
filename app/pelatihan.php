@@ -11,12 +11,12 @@ class pelatihan extends Model
 
     public static function jadwal_pelatihan_mentor()
     {
-        return self::join('mentor', 'mentor.id', '=', 'pelatihan.id')->orderBy('pelatihan.waktu_pelatihan', 'asc');
+        return self::join('mentor', 'mentor.id', '=', 'pelatihan.mentor_id')->orderBy('pelatihan.waktu_pelatihan', 'asc');
     }
 
     public static function jadwal_pelatihan()
     {
-        return self::join('mentor', 'mentor.id', '=', 'pelatihan.id')->where('pelatihan.waktu_pelatihan', '>=', DB::raw('now()'))->where('pelatihan.waktu_pelatihan', '<=', DB::raw('now() + interval 3 day'))->orderBy('pelatihan.waktu_pelatihan', 'asc');
+        return self::join('mentor', 'mentor.id', '=', 'pelatihan.mentor_id')->where('pelatihan.waktu_pelatihan', '>=', DB::raw('now()'))->where(DB::raw('date(pelatihan.waktu_pelatihan)'), '<=', DB::raw('date(now()) + interval 3 day'))->orderBy('pelatihan.waktu_pelatihan', 'asc');
     }
 
     public static function jadwal_pelatihan_tgl()

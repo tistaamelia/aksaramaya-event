@@ -32,7 +32,7 @@
         </div>
     </div>
     <div class="d-flex">
-        <a href="{{ route('LandingPageListMentor') }}" class="text-white btn text-capitalize m-auto btn-lg rounded-pill px-5" style="background-color: #f82249">tampilkan lebih banyak</a>
+        <a href="{{ route('LandingPageListMentor') }}" class="text-white btn text-capitalize m-auto btn-lg rounded-pill px-5" style="background-color: #f82249; font-weight:600;font-size:16px">tampilkan lebih banyak</a>
     </div>
 
 </section>
