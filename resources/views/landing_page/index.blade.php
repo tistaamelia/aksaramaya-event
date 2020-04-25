@@ -31,7 +31,7 @@
                 <div class="item">
                     <div class="d-flex flex-column align-items-center justify-content-center p-5">
                         <h1 class="mb-4 pb-0">MOCO ACADEMY<br></h1>
-                        <p class="mb-4 pb-0">Manfaatkan waktu luang selama Work From Home atau Study From Home. <br>Ayo ikuti berbagai pelatihan online menarik!</p>
+                        <p class="mb-4 pb-0">Platform video conference untuk pembelajaran secara digital sebagai ruang berbagi ilmu pengetahuan, pengalaman dan ketrampilan dalam bentuk seminar dan pelatihan dari dan untuk anak bangsa</p>
                         <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4 d-none" data-vbtype="video" data-autoplay="true"></a>
                         <a href="#about" class="about-btn scrollto d-none">Daftar</a>
                     </div>
