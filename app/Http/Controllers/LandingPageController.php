@@ -30,28 +30,14 @@ class LandingPageController extends Controller
 			}
 			$jadwal_pelatihan[$date][] = $val->toArray();
         }
-		/*dd($jadwal_pelatihan);
-        $tmp1 = [];
-        $tmp2 = [];
-        foreach (pelatihan::jadwal_pelatihan()->get() as $val) {
-            $d = date_create($val->waktu_pelatihan);
-            $date = date_format($d, 'Y-m-d');
-
-            $tmp1[] = $date;
-        }
-        foreach (pelatihan::jadwal_pelatihan()->get() as $val) {
-            $tmp2[][] = $val->toArray();
-        }
-        $jadwal_pelatihan = array_combine($tmp1, $tmp2);*/
         $data = [
-            'mentor' => mentor::take(6)->get(),
+            'mentor' => mentor::orderBy("id", "desc")->take(6)->get(),
             'jadwal_pelatihan' => $jadwal_pelatihan,
             'jadwal_pelatihan_tgl' => $jadwal_pelatihan_tgl,
             'pengumuman' => pengumuman::pengumuman()->get(),
             'pertanyaan_umum' => pertanyaan_umum::get(),
             'social_media' => self::socialMedia()
         ];
-		//dd($data);
         return view('landing_page.index', $data);
     }
 
@@ -67,7 +53,7 @@ class LandingPageController extends Controller
     public function listMentor()
     {
         $data = [
-            'mentor' => mentor::all(),
+            'mentor' => mentor::orderBy("id", "desc")->get(),
             'social_media' => self::socialMedia()
         ];
         return view('landing_page.list_mentor', $data);
