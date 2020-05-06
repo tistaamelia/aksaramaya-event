@@ -14,7 +14,7 @@
                         <a data-toggle="collapse" class="collapsed" href="#faq{{$key+1}}">{{ $pertanyaan->pertanyaan }} <i class="fa fa-minus-circle"></i></a>
                         <div id="faq{{$key+1}}" class="collapse" data-parent="#faq-list">
                             <p>
-                                {{ $pertanyaan->jawaban }}
+                                {!! $pertanyaan->jawaban !!}
                             </p>
                         </div>
                     </li>
